@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tailwindcss-intersect";
+@plugin "tailwindcss-motion";
+@plugin "flyonui";
+@import "flyonui/variants.css";
+@plugin "@iconify/tailwind4";
+@source "../node_modules/flyonui/flyonui.js";
+@import "flyonui/src/vendor/editor.css";
+
+
+@plugin "flyonui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: #2daf8a;
+  --color-secondary: #b5ee81;
+ 
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --animate-scroll: infinite-scroll 25s linear infinite;
+    --animate-reverse: infinite-reverse 25s linear infinite;
+    --animate-wiggle: wiggle 1s ease-in-out infinite;
+    --animate-softbounce: softBounce 2s ease-in-out infinite;
+    
+  @keyframes wiggle {
+
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+  @keyframes softBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes infinite-reverse {
+    0% {
+      transform: translateX(-100%);
+    }
+
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+}
+
+nav,
+footer {
+  @apply rounded-none
+}
+
+html,
+body {
+  @apply bg-white dark:bg-gray-950 m-0 overflow-x-hidden;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
