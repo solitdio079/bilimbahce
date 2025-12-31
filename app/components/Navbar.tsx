@@ -17,13 +17,13 @@ export default function Navbar() {
               <div className="md:hidden">
                 <button
                   type="button"
-                  className="collapse-toggle btn btn-outline btn-secondary btn-sm btn-square"
+                  className="collapse-toggle btn btn-primary rounded-none font-bold btn-md btn-square"
                   data-collapse="#navbar-collapse"
                   aria-controls="navbar-collapse"
                   aria-label="Toggle navigation"
                 >
-                  <span className="icon-[tabler--menu-2] collapse-open:hidden size-4"></span>
-                  <span className="icon-[tabler--x] collapse-open:block hidden size-4"></span>
+                  <span className="icon-[tabler--menu-2] collapse-open:hidden  size-6"></span>
+                  <span className="icon-[tabler--x] collapse-open:block hidden  size-6"></span>
                 </button>
               </div>
             </div>
